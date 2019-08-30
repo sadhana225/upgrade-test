@@ -1,0 +1,31 @@
+{
+  "name": "webdriverio-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "SET NODE_ENV=dev && node server.js",
+    "test:api": "mocha --timeout 10000 --recursive \"test/api/**/*.js\"",
+    "test:ui": "wdio wdio.conf.js",
+    "test": "npm run test:api && npm run test:ui"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/cli": "^5.12.1",
+    "@wdio/local-runner": "^5.12.1",
+    "@wdio/mocha-framework": "^5.12.1",
+    "@wdio/spec-reporter": "^5.12.1",
+    "@wdio/sync": "^5.12.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "chromedriver": "^76.0.0",
+    "wdio-chromedriver-service": "^5.0.2"
+  },
+  "dependencies": {
+    "@types/chai": "^4.2.0",
+    "@types/mocha": "^5.2.7",
+    "eslint": "^6.2.0"
+  }
+}
